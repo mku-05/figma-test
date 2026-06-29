@@ -5,6 +5,8 @@ import MobileHome03 from './pages/Mobile-Home_03';
 import Home01 from './pages/01_Home01';
 import Home02 from './pages/02_Home02';
 import Home03 from './pages/03_Home03';
+import ColorPallate from './components/ColorPallate';
+import Typography from './components/Typography';
 
 const App: React.FC = () => {
   const frame = new URLSearchParams(window.location.search).get('frame');
@@ -31,6 +33,14 @@ const App: React.FC = () => {
 
   if (frame === 'desktop-03') {
     return <Home03 />;
+  }
+
+  if (frame === 'color-pallate') {
+    return <ColorPallate />;
+  }
+
+  if (frame === 'typography') {
+    return <Typography />;
   }
 
   return (
