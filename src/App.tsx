@@ -9,6 +9,7 @@ import ColorPallate from './components/ColorPallate';
 import Typography from './components/Typography';
 import FullDesignPreview from './pages/FullDesignPreview';
 import FreeDesignSample from './components/FreeDesignSample';
+import Presentation from './components/Presentation';
 
 const App: React.FC = () => {
   const frame = new URLSearchParams(window.location.search).get('frame');
@@ -51,6 +52,10 @@ const App: React.FC = () => {
 
   if (frame === 'free-design-sample') {
     return <FreeDesignSample />;
+  }
+
+  if (frame === 'presentation') {
+    return <Presentation />;
   }
 
   return (
@@ -112,6 +117,13 @@ const App: React.FC = () => {
         >
           <h2 className="text-xl font-semibold mb-2">Free Design Sample</h2>
           <p className="text-gray-600">Yellow banner with text (10285x700)</p>
+        </a>
+        <a
+          href="?frame=presentation"
+          className="block p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow"
+        >
+          <h2 className="text-xl font-semibold mb-2">Presentation</h2>
+          <p className="text-gray-600">Portfolio thank-you card (3388x1200)</p>
         </a>
       </div>
     </div>
