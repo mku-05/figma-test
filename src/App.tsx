@@ -7,6 +7,7 @@ import Home02 from './pages/02_Home02';
 import Home03 from './pages/03_Home03';
 import ColorPallate from './components/ColorPallate';
 import Typography from './components/Typography';
+import FullDesignPreview from './pages/FullDesignPreview';
 
 const App: React.FC = () => {
   const frame = new URLSearchParams(window.location.search).get('frame');
@@ -41,6 +42,10 @@ const App: React.FC = () => {
 
   if (frame === 'typography') {
     return <Typography />;
+  }
+
+  if (frame === 'full-design-preview') {
+    return <FullDesignPreview />;
   }
 
   return (
@@ -88,6 +93,13 @@ const App: React.FC = () => {
         >
           <h2 className="text-xl font-semibold mb-2">03_Home 03</h2>
           <p className="text-gray-600">Desktop hero with phone mockups (1920x1290)</p>
+        </a>
+        <a
+          href="?frame=full-design-preview"
+          className="block p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow"
+        >
+          <h2 className="text-xl font-semibold mb-2">Full Design Preview</h2>
+          <p className="text-gray-600">Gallery showcase of all designs (14100x6484)</p>
         </a>
       </div>
     </div>
