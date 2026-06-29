@@ -8,6 +8,7 @@ import Home03 from './pages/03_Home03';
 import ColorPallate from './components/ColorPallate';
 import Typography from './components/Typography';
 import FullDesignPreview from './pages/FullDesignPreview';
+import FreeDesignSample from './components/FreeDesignSample';
 
 const App: React.FC = () => {
   const frame = new URLSearchParams(window.location.search).get('frame');
@@ -46,6 +47,10 @@ const App: React.FC = () => {
 
   if (frame === 'full-design-preview') {
     return <FullDesignPreview />;
+  }
+
+  if (frame === 'free-design-sample') {
+    return <FreeDesignSample />;
   }
 
   return (
@@ -100,6 +105,13 @@ const App: React.FC = () => {
         >
           <h2 className="text-xl font-semibold mb-2">Full Design Preview</h2>
           <p className="text-gray-600">Gallery showcase of all designs (14100x6484)</p>
+        </a>
+        <a
+          href="?frame=free-design-sample"
+          className="block p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow"
+        >
+          <h2 className="text-xl font-semibold mb-2">Free Design Sample</h2>
+          <p className="text-gray-600">Yellow banner with text (10285x700)</p>
         </a>
       </div>
     </div>
